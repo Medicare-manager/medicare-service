@@ -20,8 +20,8 @@ class SecurityConfig(
         return http.csrf { it.disable() }
             .sessionManagement { it.sessionCreationPolicy(org.springframework.security.config.http.SessionCreationPolicy.STATELESS) }
             .authorizeHttpRequests {
-                it.requestMatchers("/auth/**").permitAll()
-                    .anyRequest().authenticated()
+                it.requestMatchers("/medicine/teste").permitAll()
+                .anyRequest().authenticated()
             }
             .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter::class.java)
             .cors { it.disable() }

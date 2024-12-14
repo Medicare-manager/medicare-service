@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController
 class MedicineController {
 
     @Operation(summary = "Retorna uma mensagem de boas-vindas")
-    @GetMapping("/teste3")
+    @GetMapping("/testeRotaPriv")
     fun sayHello(): String {
-        return "Hello, Medicine!"
+        return "Hello, rota privada!"
     }
 
     @Operation(summary = "Retorna uma mensagem de boas-vindas 2")
     @GetMapping("/teste")
     fun sayHell2o(): String {
-        return "Hello, Medicine 2!"
+        return "Hello, rota pública!"
     }
 }
