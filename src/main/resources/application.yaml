@@ -21,3 +21,8 @@ swagger:
       url: http://localhost:8082/v3/api-docs
   ui:
     url: http://localhost:8082/swagger-ui.html
+
+api:
+  security:
+    token:
+      secret: my-secret-key
